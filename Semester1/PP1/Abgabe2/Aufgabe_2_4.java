@@ -72,7 +72,25 @@ public class Aufgabe_2_4 {
         for (int i = 1;i <= 7; i++){
             String action = nextSwap();
             switch (action) {
-            case ("ab""ba"):
+                case ("ab"):
+		    action = "ba";
+		    break;
+	        case ("ba"):
+                    action = "ab";
+                    break;
+	        case ("bc"):
+		    action = "cb";
+		    break;
+	        case ("cb"):
+		    action = "bc";
+		    break;
+	        case ("ac"):
+	            action = "ca";
+		    break;
+	        case ("ca"):
+		    action = "ac";
+		    break; 
+		
             	
             }
 
@@ -83,6 +101,13 @@ public class Aufgabe_2_4 {
         int guessPos = guess();
         int truePos = getPosition(a,b,c);       
 
+	if (guessPos == truePos) {
+	    System.out.println("Glückwünsch Sie haben gewonnen");
+	} else {
+            System.out.println("Leider verloren");
+        }
+
+	System.out.println(a + b + c);
         // TODO
         
     }
