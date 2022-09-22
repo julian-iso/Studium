@@ -17,10 +17,9 @@ public class Aufgabe_2_3{
     // Schema:
     public static void folge_b() {
     	int n = 15;
-    	int counter = 0;
     	int a = 4;
     	int state = 1;
-    	while (counter <= n) {
+    	for (int i = 0; i <= n; i++) {
     		System.out.print(a + " ");
     		switch (state) {
     		case 1:
@@ -36,7 +35,6 @@ public class Aufgabe_2_3{
     			state = 1;
     			break;
     		}
-    		counter++;
     		
     	}
         
@@ -46,6 +44,28 @@ public class Aufgabe_2_3{
     // 3 4 6 3 7 12 6
     // Schema:
     public static void folge_c() {
+    	int n = 15;
+    	int a = 3;
+    	int check = 0;
+    	for (int i = 1; i <= n; i++) {
+    		System.out.print(a + " ");
+    		switch (check) {
+    			case 0:
+    				a = a + i;
+    				check = 1;
+    				break;
+    			case 1:
+    				a = a + i;
+    				check = 2;
+    				break;
+    			case 2:
+    				a = a - i;
+    				check = 0;
+    				break;
+    		
+    		}
+    	
+    	}
         
     }
 
