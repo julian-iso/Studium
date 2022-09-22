@@ -14,7 +14,7 @@ public class Aufgabe_2_3{
 
     // Aufgabenteil (b)
     // 4 5 3 6 7 5 8 9 ...
-    // Schema:
+    // Schema: 
     public static void folge_b() {
     	int n = 15;
     	int a = 4;
