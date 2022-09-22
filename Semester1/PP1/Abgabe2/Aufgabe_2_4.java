@@ -26,11 +26,9 @@ public class Aufgabe_2_4 {
         	action = "cb";
         	System.out.println("Tausche C mit B");
         }
-
-        // TODO
-
         
         return action;
+	
     }
 
     // 1
@@ -45,8 +43,7 @@ public class Aufgabe_2_4 {
         	pos = 3; 
         }
 
-        // TODO
-
+        
         return pos;
     }
 
@@ -57,8 +54,7 @@ public class Aufgabe_2_4 {
         int pos = 0;
         do {
         	pos = IOTools.readInteger("Bitte geben Sie eine Zahl ein: ");
-        } while ((pos <= 0) || (pos > 3));
-        // TODO
+        } while ((pos <= 0) || (pos > 3));        
 
         return pos;
     }
@@ -71,44 +67,74 @@ public class Aufgabe_2_4 {
 
         for (int i = 1;i <= 7; i++){
             String action = nextSwap();
+	    char tmp;
+	    
             switch (action) {
+		
                 case ("ab"):
-		    action = "ba";
+		    
+		    tmp = a;
+		    a = b;
+		    b = tmp;
 		    break;
+		    
 	        case ("ba"):
-                    action = "ab";
+		    
+                    tmp = b;
+		    b = a;
+		    a = tmp;
                     break;
+		    
 	        case ("bc"):
-		    action = "cb";
+		    
+		    tmp = b;
+		    b = c;
+		    c = tmp;
 		    break;
+		    
 	        case ("cb"):
-		    action = "bc";
+		    
+		    tmp = c;
+		    c= b;
+		    b = tmp;
 		    break;
+		    
 	        case ("ac"):
-	            action = "ca";
+		    
+	            tmp = a;
+		    a = c;
+		    c= tmp;
 		    break;
+		    
 	        case ("ca"):
-		    action = "ac";
+		    
+		    tmp = c;
+		    c = a;
+		    a = tmp;
 		    break; 
 		
             	
             }
-
-            // TODO
+	    
         }
 
         
-        int guessPos = guess();
-        int truePos = getPosition(a,b,c);       
+        int guessPos = guess(); // gibt die Position aus, welche der Spieler geraten hat
+        int truePos = getPosition(a,b,c); // gibt die korrekte aktuelle Positionaus       
 
-	if (guessPos == truePos) {
-	    System.out.println("Glückwünsch Sie haben gewonnen");
-	} else {
-            System.out.println("Leider verloren");
+	if (guessPos == truePos) { // prüft ob der Spieler richtig geraten
+	    
+	    System.out.println("Glückwünsch Sie haben gewonnen"); // Nachricht wenn man richtig geraten hat
+	    
+	} else { // falls der Spieler falsch geraten hat
+	    
+            System.out.println("Leider verloren"); // Nachricht wenn man falsch geraten hat
+	    
         }
 
-	System.out.println(a + b + c);
-        // TODO
+	System.out.println(a+b+c);
+
+        
         
     }
     
