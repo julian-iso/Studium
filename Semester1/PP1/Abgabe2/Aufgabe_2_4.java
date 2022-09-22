@@ -1,3 +1,4 @@
+// Name: Julian Maurus
 public class Aufgabe_2_4 {
 
     // 1.5
