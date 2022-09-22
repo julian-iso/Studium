@@ -67,51 +67,51 @@ public class Aufgabe_2_4 {
 
         for (int i = 1;i <= 7; i++){
             String action = nextSwap();
-	    char tmp;
+	    	char tmp;
 	    
             switch (action) {
 		
                 case ("ab"):
 		    
-		    tmp = a;
-		    a = b;
-		    b = tmp;
-		    break;
+		    		tmp = a;
+					a = b;
+					b = tmp;
+					break;
 		    
-	        case ("ba"):
+				case ("ba"):
 		    
                     tmp = b;
-		    b = a;
-		    a = tmp;
+					b = a;
+					a = tmp;
                     break;
 		    
-	        case ("bc"):
+	        	case ("bc"):
 		    
-		    tmp = b;
-		    b = c;
-		    c = tmp;
-		    break;
+					tmp = b;
+					b = c;
+					c = tmp;
+					break;
 		    
-	        case ("cb"):
+	        	case ("cb"):
 		    
-		    tmp = c;
-		    c= b;
-		    b = tmp;
-		    break;
+					tmp = c;
+					c= b;
+					b = tmp;
+					break;
+
+	        	case ("ac"):
 		    
-	        case ("ac"):
+					tmp = a;
+					a = c;
+					c= tmp;
+					break;
 		    
-	            tmp = a;
-		    a = c;
-		    c= tmp;
-		    break;
-		    
-	        case ("ca"):
-		    
-		    tmp = c;
-		    c = a;
-		    a = tmp;
-		    break; 
+				case ("ca"):
+
+					tmp = c;
+					c = a;
+					a = tmp;
+					break;
 		
             	
             }
@@ -122,17 +122,17 @@ public class Aufgabe_2_4 {
         int guessPos = guess(); // gibt die Position aus, welche der Spieler geraten hat
         int truePos = getPosition(a,b,c); // gibt die korrekte aktuelle Positionaus       
 
-	if (guessPos == truePos) { // prüft ob der Spieler richtig geraten
-	    
-	    System.out.println("Glückwünsch Sie haben gewonnen"); // Nachricht wenn man richtig geraten hat
-	    
-	} else { // falls der Spieler falsch geraten hat
-	    
-            System.out.println("Leider verloren"); // Nachricht wenn man falsch geraten hat
-	    
-        }
+		if (guessPos == truePos) { // prüft ob der Spieler richtig geraten
 
-	System.out.println(a+b+c);
+			System.out.println("Glückwünsch Sie haben gewonnen"); // Nachricht wenn man richtig geraten hat
+
+		} else { // falls der Spieler falsch geraten hat
+
+				System.out.println("Leider verloren"); // Nachricht wenn man falsch geraten hat
+
+			}
+
+		System.out.println(a+b+c);
 
         
         
