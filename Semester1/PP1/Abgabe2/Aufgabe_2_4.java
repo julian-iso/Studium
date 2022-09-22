@@ -7,25 +7,32 @@ public class Aufgabe_2_4 {
         // ganzzahlige Zufallszahl aus dem Intervall [1,6]
         int zufall = (int) (Math.random() * 6) + 1;
         String action = "";  // gibt an, welche Becher getauscht werden sollen
+        
         switch (zufall) {
         case 1:
         	action = "ab";
         	System.out.println("Tausche A mit B");
+        	break;
         case 2:
         	action = "ba";
         	System.out.println("Tausche B mit A");
+        	break;
         case 3:
         	action = "ac";
         	System.out.println("Tausche A mit C");
+        	break;
         case 4:
         	action = "ca";
         	System.out.println("Tausche C mit A");
+        	break;
         case 5:
         	action = "bc";
         	System.out.println("Tausche B mit C");
+        	break;
         case 6:
         	action = "cb";
         	System.out.println("Tausche C mit B");
+        	break;
         }
         
         return action;
@@ -35,7 +42,7 @@ public class Aufgabe_2_4 {
     // 1
     // Position der Kugel bestimmen
     public static int getPosition(char a, char b, char c){
-        int pos = 0;
+        int pos;
         if (a == 'x') {
         	pos = 1;
         } else if (b == 'x') {
@@ -52,7 +59,7 @@ public class Aufgabe_2_4 {
     // 1.5
     // Position der Kugel raten
     public static int guess(){
-        int pos = 0;
+        int pos;
         do {
         	pos = IOTools.readInteger("Bitte geben Sie eine Zahl ein: ");
         } while ((pos <= 0) || (pos > 3));        
@@ -65,7 +72,6 @@ public class Aufgabe_2_4 {
     public static void main(String[] args){
         // Initialisierung der Becher (a und c leer, b belegt)
         char a = '-', b = 'x', c = '-';
-
         for (int i = 1;i <= 7; i++){
             String action = nextSwap();
 	    	char tmp;
@@ -73,7 +79,7 @@ public class Aufgabe_2_4 {
             switch (action) {
 		
                 case ("ab"):
-		    
+                	
 		    		tmp = a;
 					a = b;
 					b = tmp;
@@ -113,10 +119,10 @@ public class Aufgabe_2_4 {
 					c = a;
 					a = tmp;
 					break;
-		
+				
             	
             }
-	    
+            
         }
 
         
@@ -133,7 +139,7 @@ public class Aufgabe_2_4 {
 
 			}
 
-		System.out.println(a+b+c);
+		System.out.println(a + "" + b + "" +c);
 
         
         
