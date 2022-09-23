@@ -21,15 +21,21 @@ public class Calculator {
     }
     
     public static void main(String[] args) {
-        //System.out.println(add(2,2));
-        //System.out.println(sub(2,2));
-        //System.out.println(multiply(2,2));
-        System.out.println(myOwnModulo(5,2));
+        System.out.println(add(2,2));
+        System.out.println(sub(2,2));
+        System.out.println(multiply(2,2));
+        System.out.println(divide(2,2));
+        System.out.println(myOwnModulo(9,2));
         
         
-        int matrikelnr = 0;
+        int matrikelnr = 1923821;
         int ergebnis = matrikelnr % 42;
+        int myergebnis = myOwnModulo(matrikelnr, 42);
         
+        // Ausgabe zum Überprüfen ob die Ergbnisse identisch sind
+        System.out.println(ergebnis);
+        System.out.println(myergebnis);
+        // Ausgabe zeigt: Die Ergebnisse sind identisch
         
 
 

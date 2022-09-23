@@ -61,7 +61,7 @@ public class Aufgabe_2_1 {
 	/* 
     * 1. Es wird eine Zahl n eingelesen 
 	* 2. Das Ergebnis (erg3) ist zu Beginn 0
-	* 3. Solgane n größer als 10 ist
+	* 3. Solgane n größer als 0 ist
 	*    a. das Ergebnis wird verzehnfacht
 	*    b. die letze Stelle des Ergebnisses wird entfernt und zum ergebnis addiert
 	*    c. Das Ergebnis wird durch 10 geteilt

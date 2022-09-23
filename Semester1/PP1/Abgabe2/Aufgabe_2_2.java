@@ -11,7 +11,7 @@ public class Aufgabe_2_2 {
     		a = IOTools.readLong("Bitte geben Sie eine ganze Zahl ein: ");
     	}
     	
-    	boolean result = true;
+    	boolean result = true; 
     	
     	while (a >= 10 || result == false) {
     		
@@ -22,7 +22,6 @@ public class Aufgabe_2_2 {
     			break;
     		}
     		a /= 10;
-    		System.out.println("a: " + a);
     		
     		
     	}
